@@ -1,38 +1,30 @@
-import React from 'react';
-import GoogleButton from 'react-google-button';
-import { UserAuth } from '../context/AuthContext'
+import React from "react";
+import { UserAuth } from "../context/AuthContext";
+import Form from "../components/Form";
+import Lobby from '../pages/Lobby'
 
 function Home() {
-    const { googleSignIn } = UserAuth();
+ 
 
-    const { currentUser, logOut } = UserAuth();
+  const { user } = UserAuth();
 
-    const handleGoogleSignIn = async () => {
-        try {
-            await googleSignIn();
-        } catch (error) {
-            console.log(error);
-        }
+
+  return (
+    <>
+    {
+        user ? <Lobby/> : <Form/>
     }
-    const handleLogOut = async () => {
-        try {
-            await logOut();
-        } catch (error) {
-            console.log(error);
-        }
-    };
-    return (
-        <>
-            {currentUser? (
-                <p>
-                    {currentUser.displayName}
-                    <button onClick={handleLogOut}>Logout</button>
-                </p>
-            ) : (
-                <GoogleButton onClick={handleGoogleSignIn} />
-            )}
+   
+          {/* {user ? (
+              <p>
+              {user.displayName}
+              <button onClick={handleLogOut}>Logout</button>
+            </p>
+          ) : (
+            <GoogleButton onClick={handleGoogleSignIn} />
+        )} */}
         </>
-    )
+  );
 }
 
 export default Home;
