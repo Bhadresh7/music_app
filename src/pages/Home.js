@@ -20,12 +20,17 @@ function Home() {
         } catch (error) {
             console.log(error);
         }
-    }
+    };
     return (
         <>
-            {
-                currentUser ? <p><button onClick={handleLogOut}>Logout</button></p> : <GoogleButton onClick={handleGoogleSignIn} />
-            }
+            {currentUser? (
+                <p>
+                    {currentUser.displayName}
+                    <button onClick={handleLogOut}>Logout</button>
+                </p>
+            ) : (
+                <GoogleButton onClick={handleGoogleSignIn} />
+            )}
         </>
     )
 }
