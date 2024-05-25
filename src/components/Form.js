@@ -12,13 +12,13 @@ function Form() {
     }
   };
   return (
-    <section className="flex flex-col md:flex-row h-screen items-center">
+    <section className="flex flex-col md:flex-row h-auto items-center">
       <div
         className="bg-white w-full md:max-w-md lg:max-w-full md:mx-auto md:w-1/2 xl:w-1/3 h-screen px-6 lg:px-16 xl:px-12
         flex items-center justify-center"
       >
-        <div className="w-full h-100">
-          <h1 className="text-xl md:text-2xl font-bold leading-tight mt-12">
+        <div className="w-full h-auto">
+          <h1 className="text-xl md:text-2xl font-bold leading-tight">
             Log in to your account
           </h1>
 
@@ -78,6 +78,7 @@ function Form() {
                 src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/2048px-Google_%22G%22_logo.svg.png"
                 height={30}
                 width={30}
+                alt="googe image"
               />
               <span className="ml-4" onClick={handleGoogleSignIn}>Log in with Google</span>
             </div>

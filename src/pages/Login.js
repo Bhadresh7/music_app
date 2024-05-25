@@ -1,9 +1,9 @@
 import React from "react";
 import { UserAuth } from "../context/AuthContext";
 import Form from "../components/Form";
-import Lobby from '../pages/Lobby'
+import Lobby from './Lobby'
 
-function Home() {
+function Login() {
  
 
   const { user } = UserAuth();
@@ -27,4 +27,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default Login;
