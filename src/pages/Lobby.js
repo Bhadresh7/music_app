@@ -13,6 +13,7 @@ function Lobby() {
   };
   return (
     <div>
+      This is the page where we create rooms 
       <span>{user.displayName}</span>
       <button onClick={handleLogOut}>Logout</button>
     </div>

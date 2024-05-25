@@ -1,7 +1,8 @@
 import React from "react";
 import { UserAuth } from "../context/AuthContext";
 import Form from "../components/Form";
-import Lobby from './Lobby'
+// import Lobby from './Lobby'
+import Username from './Username'
 
 function Login() {
  
@@ -12,8 +13,9 @@ function Login() {
   return (
     <>
     {
-        user ? <Lobby/> : <Form/>
+        user ? <Username/> : <Form/>
     }
+    
    
           {/* {user ? (
               <p>

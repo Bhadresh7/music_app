@@ -78,7 +78,7 @@ function Form() {
                 src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/2048px-Google_%22G%22_logo.svg.png"
                 height={30}
                 width={30}
-                alt="googe image"
+                alt="pic"
               />
               <span className="ml-4" onClick={handleGoogleSignIn}>Log in with Google</span>
             </div>
