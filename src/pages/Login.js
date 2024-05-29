@@ -1,8 +1,7 @@
 import React from "react";
 import { UserAuth } from "../context/AuthContext";
 import Form from "../components/Form";
-// import Lobby from './Lobby'
-import Username from './Username'
+
 
 function Login() {
  
@@ -12,9 +11,7 @@ function Login() {
 
   return (
     <>
-    {
-        user ? <Username/> : <Form/>
-    }
+  
     
    
           {/* {user ? (

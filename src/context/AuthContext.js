@@ -14,6 +14,7 @@ export const AuthContextProvider = ({ children }) => {
 
     const googleSignIn = async() => {
         const provider = new GoogleAuthProvider();
+        provider.setCustomParameters({prompt:"select_account"})
         await signInWithPopup(auth, provider);
     };
 
