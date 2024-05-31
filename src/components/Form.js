@@ -1,6 +1,6 @@
 import React from "react";
 import { UserAuth } from "../context/AuthContext";
-
+import music from "../assets/music.svg";
 function Form() {
   const { googleSignIn } = UserAuth();
 
@@ -13,6 +13,7 @@ function Form() {
   };
   return (
     <section className="flex flex-col md:flex-row h-auto items-center">
+      <img src={music} width={600} height={600} alt="form" className="grid place-items-center" />
       <div
         className="bg-white w-full md:max-w-md lg:max-w-full md:mx-auto md:w-1/2 xl:w-1/3 h-screen px-6 lg:px-16 xl:px-12
         flex items-center justify-center"
@@ -80,18 +81,25 @@ function Form() {
                 width={30}
                 alt="pic"
               />
-              <span className="ml-4" onClick={handleGoogleSignIn}>Log in with Google</span>
+              <span className="ml-4" onClick={handleGoogleSignIn}>
+                Log in with Google
+              </span>
             </div>
           </button>
 
           <p className="mt-8">
             Need an account?{" "}
-            <a href="/" className="text-blue-500 hover:text-blue-700 font-semibold">
+            <a
+              href="/"
+              className="text-blue-500 hover:text-blue-700 font-semibold"
+            >
               Create an account
             </a>
           </p>
         </div>
       </div>
+
+      &copy;
     </section>
   );
 }
